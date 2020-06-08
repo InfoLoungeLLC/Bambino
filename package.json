@@ -1,0 +1,17 @@
+{
+  "name": "biz.stroly.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "htmlhint **/*.html",
+    "build:css": "node-sass scss --source-map css --output css --output-style compressed",
+    "watch:css": "node-sass scss --source-map css --watch scss --output css --output-style compressed"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "htmlhint": "^0.11.0",
+    "node-sass": "^4.13.1"
+  }
+}

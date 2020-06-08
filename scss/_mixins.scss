@@ -1,0 +1,145 @@
+/*--------------------------------------------------------------
+  media queries
+-------------------------------------------------------------- */
+@mixin media-320 {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+@mixin media-375 {
+  @media screen and (max-width: 375px) {
+    @content;
+  }
+}
+@mixin media-425 {
+  @media screen and (max-width: 425px) {
+    @content;
+  }
+}
+@mixin media-Mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin media-768 {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin media-1024{
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-1500{
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}
+
+
+
+
+/*--------------------------------------------------------------
+  font settings
+-------------------------------------------------------------- */
+@mixin fontFamilyBase {
+  font-family: "Noto Sans JP","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック",sans-serif;
+}
+
+@mixin fontHiragino {
+  font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", sans-serif;
+}
+
+@mixin fontHelvetica {
+  font-family: "Helvetica","Arial","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック",sans-serif;
+}
+
+@mixin fontSize ($fontSize) {
+  font-size: $fontSize/$baseFontSize + rem;
+}
+@mixin lineHeight ($fontSize, $lineHeight) {
+  line-height: $lineHeight/$fontSize;
+}
+
+@mixin italic{
+  font-style: italic;
+}
+$baseFontSize: 16;
+
+/*--------------------------------------------------------------
+  header-sec 共通
+-------------------------------------------------------------- */
+@mixin headerSec{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0);
+  &.bk{
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/*--------------------------------------------------------------
+  contents Style共通
+-------------------------------------------------------------- */
+@mixin inn{
+  max-width: 425px;
+  margin: 0 auto;
+  @include media-425{
+    max-width: 300px;
+  }
+  @include media-375{
+    max-width: 290px;
+  }
+  @include media-320{
+    margin: 0 5%;
+  }
+  @include media-768{
+    max-width: 90%;
+  }
+  @include media-1024{
+    max-width: 940px;
+  }
+}
+
+/*--------------------------------------------------------------
+  Button Style共通
+-------------------------------------------------------------- */
+@mixin btn{
+  background-color: $colorBL;
+  border-radius: 33px;
+  line-height: 66px;
+  text-align: center;
+  max-width: 300px;
+  width: 46.8%;
+  height: auto;
+  color: $white;
+}
+@mixin btn02{
+  background-color: $colorBL;
+  border-radius: 5px;
+  line-height: 40px;
+  text-align: center;
+  max-width: 300px;
+  width: 46.8%;
+  height: auto;
+  color: $white;
+}
+@mixin btn03{
+  background-color: $colorBL;
+  border-radius: 5px;
+  line-height: 40px;
+  text-align: center;
+  max-width: 600px;
+  width: 46.8%;
+  height: auto;
+  color: $white;
+}
