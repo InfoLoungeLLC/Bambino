@@ -1,298 +1,286 @@
 .body {
-    background-color: $webshop-green;
+  background-color: $webshop-green;
 }
 /*--------------------------------------------------------------
-  1.header
+1.header
 -------------------------------------------------------------- */
 .header {
-    //
-    // --- media-Mobile ---
-    //
-    @include media-Mobile {
-      .header-sec {
-        &__tongue {
-          &__sp {
-            width: 100%;
-            text-align: center;
-            height: 920px;
-            img{
-              position: relative;
-              width: 640px;
-              height: 920px;
-            }
-          }
-          &__pc {display: none;}
-        }
-        &__logo {
-          &__sp {
-            img {
-              position: absolute;
-              width: 316px;
-              height: 48px;
-              top: 20px;
-              left: calc(100%/2 - 320px + 10px);
-              z-index: 2;
-            }
-          }
-          &__pc {display: none;}
-        }
-      }
-    }
-  
-    //
-    // --- media-Tablet & Pc ---
-    //
-    @include media-768{
-        .header-sec {
-            &__tongue {
-                &__sp {display: none;}
-                &__pc {
-                    width: 1500px;
-                    height: 1000px;
-                    margin: 0 auto;
-                    img{
-                        position: relative;
-                        width: 1500px;
-                        height: 960px;
-                        z-index: 1;
-                    }
-                }
-            }
-            &__logo {
-                &__sp {display: none;}
-                &__pc {
-                    img {
-                        position: absolute;
-                        width: 316px;
-                        height: 48px;
-                        top: 20px;
-                        left: calc(100%/2 - 750px + 10px);
-                        z-index: 2;
-                    }
-                }
-            }
-        }
-    }
-}
-  
-  /*--------------------------------------------------------------
-    2.main-sec
-  -------------------------------------------------------------- */
-.main {
-  position: absolute;
   //
   // --- media-Mobile ---
   //
   @include media-Mobile {
-    top: 870px;
-    width: 598px;
-    height: 1100px;
-    background-color: $webshop-darkgreen;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    .main-sec {
-      &__text01 {
-        &__sp {          
-          margin: 0 auto;
-          width: 480px;
-          img {
-            margin: 50px 0;
-            width: 480px;
-            height: 96px;
+    .header-sec {
+      &__tongue {
+        &__sp {
+          width: 100%;
+          text-align: center;
+          height: 920px;
+          img{
+            position: relative;
+            width: 100%;
+            height: 920px;
           }
         }
         &__pc {display: none;}
       }
-      &__description01 {
-        width: 400px;
-        margin: 0 auto;
-        p {
-          font-size: 20px;
-          font-family: "ヒラギノ明朝 Pro";
-          color: $white;
-          text-align: left;
-        }
-      }
-      &__description02 {
-        width: 480px;
-        margin: 0 auto;
-        p {
-          font-size: 26px;
-          font-family: "ヒラギノ明朝 Pro";
-          color: $white;
-          text-align: center;
-        }
-      }
-      &__image {
-        &__sp {          
-          width: 100%;
-          text-align: center;
+      &__logo {
+        &__sp {
           img {
-            margin: 50px 0;
-            width: 558px;
-            height: 372px;
+            position: absolute;
+            width: 316px;
+            height: 48px;
+            top: 20px;
+            left: 10px;
+            z-index: 2;
           }
         }
-        &__pc {display: none}
-      }
-      &__adjustment {
-        height: 88px;
-        text-align: center;
-        margin: 50px;
-      }
-      &__btn {
-        width: 400px;
-        height: 88px;
-        background-color: $green;
-        font-size: 26px;
-        color: $white;
-        font-family: "ヒラギノ角ゴ ProN";
-        border-radius: 44px;
-        padding: 30px;
-        text-align: center;
+        &__pc {display: none;}
       }
     }
   }
+
   //
   // --- media-Tablet & Pc ---
   //
-  @include media-768 {
-    top: 910px;
-    width: 980px;
-    height: 1400px;
-    background-color: $webshop-darkgreen;
-    margin: 0 auto;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    z-index: 3;
-    .main-sec {
-      &__text01 {
-        &__sp {display: none;}
-        &__pc {
-          margin: 0 auto;
-          width: 550px;
-          img {
-            margin: 80px 0;
-            width: 550px;
-            height: 110px;
+  @include media-768{
+      .header-sec {
+          &__tongue {
+              &__sp {display: none;}
+              &__pc {
+                  width: 100%;
+                  height: 1000px;
+                  margin: 0 auto;
+                  img{
+                      position: relative;
+                      width: 100%;
+                      height: 960px;
+                      z-index: 1;
+                  }
+              }
           }
-        }
+          &__logo {
+              &__sp {display: none;}
+              &__pc {
+                  img {
+                      position: absolute;
+                      width: 316px;
+                      height: 48px;
+                      top: 20px;
+                      left: 10px;
+                      z-index: 2;
+                  }
+              }
+          }
       }
-      &__description01 {
+  }
+}
+
+/*--------------------------------------------------------------
+  2.main-sec
+-------------------------------------------------------------- */
+.main {
+position: absolute;
+//
+// --- media-Mobile ---
+//
+@include media-Mobile {
+  top: 870px;
+  width: 598px;
+  height: 1100px;
+  background-color: $webshop-darkgreen;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  .main-sec {
+    &__text01 {
+      &__sp {          
+        margin: 0 auto;
         width: 480px;
-        margin: 0 auto;
-        p {
-          font-size: 22px;
-          font-family: "ヒラギノ明朝 Pro";
-          color: $white;
-          text-align: left;
+        img {
+          margin: 50px 0;
+          width: 480px;
+          height: 96px;
         }
       }
-      &__description02 {
-        width: 400px;
-        margin: 0 auto;
-        p {
-          font-size: 26px;
-          font-family: "ヒラギノ明朝 Pro";
-          color: $white;
-          text-align: center;
-        }
-      }
-      &__image {
-        &__sp {display: none}
-        &__pc {
-          width: 790px;
-          margin: 0 auto;
-          img {
-            margin: 50px 0;
-            width: 790px;
-            height: 526px;
-          }
-        }
-      }
-      &__adjustment {
-        width: 300px;
-        margin: 50px auto;
-      }
-      &__btn {
-        position: absolute;
-        width: 300px;
-        height: 66px;
-        background-color: $green;
-        font-size: 26px;
+      &__pc {display: none;}
+    }
+    &__description01 {
+      width: 400px;
+      margin: 0 auto;
+      p {
+        font-size: 18px;
+        font-family: "ヒラギノ明朝 Pro W3";
         color: $white;
-        font-family: "ヒラギノ角ゴ ProN";
-        padding: 10px 24px;
-        border-radius: 40px;
+        text-align: left;
+      }
+    }
+    &__description02 {
+      width: 480px;
+      margin: 0 auto;
+      p {
+        font-size: 26px;
+        font-family: "ヒラギノ明朝 Pro W3";
+        color: $white;
         text-align: center;
       }
+    }
+    &__image {
+      &__sp {          
+        width: 100%;
+        text-align: center;
+        img {
+          margin: 20px 0 30px;
+          width: 558px;
+          height: 372px;
+        }
+      }
+      &__pc {display: none}
+    }
+    &__adjustment {
+      padding-top: 30px;
+      width: 100%;
+      //text-align: center;
+    }
+    &__btn {
+      height: 88px;
+      width: 400px;
+      background-color: $green;
+      font-size: 26.7px;
+      color: $white;
+      font-family: "ヒラギノ角ゴPro w3";
+      border-radius: 44px;
+      padding-top: 23px;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}
+//
+// --- media-Tablet & Pc ---
+//
+@include media-768 {
+  top: 910px;
+  width: 980px;
+  height: 1400px;
+  background-color: $webshop-darkgreen;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  z-index: 3;
+  .main-sec {
+    &__text01 {
+      &__sp {display: none;}
+      &__pc {
+        margin: 0 auto;
+        width: 550px;
+        img {
+          margin: 80px 0;
+          width: 550px;
+          height: 110px;
+        }
+      }
+    }
+    &__description01 {
+      width: 480px;
+      margin: 0 auto;
+      p {
+        font-size: 20px;
+        font-family: "ヒラギノ明朝 Pro W3";
+        color: $white;
+        text-align: left;
+      }
+    }
+    &__description02 {
+      width: 500px;
+      margin: 0 auto;
+      p {
+        font-size: 28px;
+        font-family: "ヒラギノ明朝 Pro W6";
+        color: $white;
+        text-align: center;
+      }
+    }
+    &__image {
+      &__sp {display: none}
+      &__pc {
+        width: 790px;
+        margin: 0 auto;
+        img {
+          margin: 50px 0;
+          width: 790px;
+          height: 526px;
+        }
+      }
+    }
+    &__adjustment {
+      width: 300px;
+      margin: 50px auto;
+    }
+    &__btn {
+      position: absolute;
+      width: 300px;
+      height: 66px;
+      background-color: $green;
+      font-size: 20px;
+      color: $white;
+      font-family: "ヒラギノ角ゴProN W6";
+      padding: 18px 24px;
+      border-radius: 40px;
+      text-align: center;
+    }
+  }
+}
+}
+
+/*--------------------------------------------------------------
+3.footer
+-------------------------------------------------------------- */
+.footer {
+//
+// --- media-Mobile---
+//
+@include media-Mobile {
+  .footer-sec {
+    &__footer {
+      &__sp {
+        padding-top: 1100px;
+        width: 100%;
+        text-align: center;
+        height: 56px;
+        img {
+          text-align: center;
+          width: 100%;
+          height: 56px;
+        }
+      }
+      &__pc {display: none}
     }
   }
 }
   
-/*--------------------------------------------------------------
-  3.footer
--------------------------------------------------------------- */
-.footer { 
-  position: absolute;
-  //
-  // --- media-Mobile---
-  //
-  @include media-Mobile {
-    top: 1700px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    .footer-sec {
-      &__adjustment {
-        width: 640px;
-        height: 65px;
-        margin: 300px auto 0;
-      }
-      &__footer {
-        &__sp {
-          img {
-            text-align: center;
-            width: 640px;
-            height: 65px;
-          }
-        }
-        &__pc {display: none}
-      }
-    }
-  }
-    
-  //
-  // --- media-Tablet & Pc---
-  //
-  @include media-768 {
-    top: 2300px;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    .footer-sec {
-      &__adjustment {
-        width: 1500px;
+//
+// --- media-Tablet & Pc---
+//
+@include media-768 {
+  .footer-sec {
+    &__footer {
+      &__sp {display: none;}
+      &__pc {
+        padding-top: 1450px;
+        width: 100%;
+        text-align: center;
         height: 56px;
-        margin: 100px auto 0;
-      }
-      &__footer {
-        &__sp {display: none;}
-        &__pc {
-          img {
-            text-align: center;
-            width: 1500px;
-            height: 56px;
-          }
+        img {
+          text-align: center;
+          width: 100%;
+          height: 56px;
         }
       }
     }
   }
+}
 }

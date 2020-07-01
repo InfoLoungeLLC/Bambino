@@ -1,9 +1,8 @@
-
 /*--------------------------------------------------------------
   1.header
 -------------------------------------------------------------- */
 .header {
-  text-align:center;
+  text-align: center;
   //
   // --- media-Mobile ---
   //
@@ -11,47 +10,57 @@
     width: 100%;
     .header-sec {
       &__store01 {
-        &__sp{
+        &__sp {
           width: 100%;
           height: 920px;
           text-align: center;
-          img{
-            width: 640px;
+
+          img {
+            width: 100%;
             height: 920px;
             z-index: -1;
           }
         }
-        &__pc{display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
-      &__logo{
+
+      &__logo {
         &__sp {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 1.5rem;
-          cursor: pointer;  
+          cursor: pointer;
           position: absolute;
-          text-align:center;
-          top: 10px;
-          left: calc(100%/2 - 138px);
+          text-align: center;
+          top: 35px;
+          left: calc(100% / 2 - 138px);
+
           img {
             width: 276px;
             height: 174px;
             z-index: 1;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
-      &__catch-phrase{
+
+      &__catch-phrase {
         &__sp {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 1.5rem;
           border-radius: 50%;
-          cursor: pointer;  
+          cursor: pointer;
           position: absolute;
-          top: 230px;
+          top: 267px;
           left: calc(100% / 2 - 250px); //(全体 - 物体のサイズ)/2
           img {
             width: 500px;
@@ -59,21 +68,26 @@
             z-index: 1;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
+
       &__description {
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;  
+        cursor: pointer;
         position: absolute;
-        height: 220px;
-        top: 550px;
-        left: calc(100%/2 - 190px);
-        p{
+        height: 265px;
+        top: 555px;
+        left: calc(100% / 2 - 180px);
+
+        p {
           text-align: left;
-          font-family: ヒラギノ明朝 Pro;
-          width: 380px;
+          font-family: "ヒラギノ明朝 Pro W3";
+          width: 360px;
           color: white;
           font-size: 22px;
         }
@@ -84,7 +98,7 @@
   //
   // --- media-Tablet & Pc ---
   //
-  @include media-768{
+  @include media-768 {
     width: 100%;
     .header-sec {
       &__nav {
@@ -93,10 +107,11 @@
         height: 100vh;
         width: 100%;
         left: -100%;
-        background: rgba(99, 99, 99,.95);
+        background: rgba(99, 99, 99, .95);
         -webkit-transition: 1.5s;
         transition: 1.5s;
       }
+
       &__target-inner {
         z-index: 1;
         width: 40px;
@@ -105,6 +120,7 @@
         position: absolute;
         left: 1370px;
         top: 10px;
+
         &__1 {
           display: block;
           width: 66px;
@@ -116,6 +132,7 @@
           position: absolute;
           top: 0;
         }
+
         &__2 {
           display: block;
           width: 66px;
@@ -127,6 +144,7 @@
           position: absolute;
           top: 13px;
         }
+
         &__3 {
           display: block;
           width: 66px;
@@ -138,16 +156,19 @@
           position: absolute;
           top: 26px;
         }
+
         &__a {
           background: #ffffff;
           -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
           top: 13px;
         }
+
         &__b {
           background: #ffffff;
           opacity: 0;
         }
+
         &__c {
           background: #ffffff;
           -webkit-transform: rotate(-225deg);
@@ -155,31 +176,41 @@
           top: 13px;
         }
       }
+
       &__store01 {
-        &__sp{display: none;}
-        &__pc{
+        &__sp {
+          display: none;
+        }
+
+        &__pc {
           width: 100%;
           height: 1000px;
           text-align: center;
-          img{
-            width: 1500px;
+
+          img {
+            width: 100%;
             height: 960px;
             z-index: -1;
           }
         }
       }
-      &__logo{
-        &__sp {display: none;}
+
+      &__logo {
+        &__sp {
+          display: none;
+        }
+
         &__pc {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 1.5rem;
-          cursor: pointer;  
+          cursor: pointer;
           position: absolute;
-          text-align:center;
-          top: 10px;
-          left: calc(100%/2 - 180px);
+          text-align: center;
+          top: 40px;
+          left: calc(100% / 2 - 180px);
+
           img {
             width: 360px;
             height: 227px;
@@ -187,18 +218,23 @@
           }
         }
       }
-      &__catch-phrase{
-        &__sp {display: none;}
+
+      &__catch-phrase {
+        &__sp {
+          display: none;
+        }
+
         &__pc {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 1.5rem;
           border-radius: 50%;
-          cursor: pointer;  
+          cursor: pointer;
           position: absolute;
-          top: 290px;
-          left: calc(100%/2 - 490px);
+          top: 350px;
+          left: calc(100% / 2 - 490px);
+
           img {
             width: 980px;
             height: 140px;
@@ -206,25 +242,28 @@
           }
         }
       }
+
       &__description {
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;  
+        cursor: pointer;
         position: absolute;
         height: 220px;
-        top: 550px;
-        left: calc(100%/2 - 240px);
-        p{
+        width: 360px;
+        top: 580px;
+        left: calc(100% / 2 - 180px);
+
+        p {
           text-align: left;
-          font-family: ヒラギノ明朝 Pro;
-          width: 480px;
+          font-family: ヒラギノ明朝 Pro W3;
           color: white;
-          font-size: 26.67px;
+          font-size: 20px;
         }
       }
+
       /* 動き */
-      &__fadein{
+      &__fadein {
         -webkit-transform: translateX(100%);
         transform: translateX(100%);
       }
@@ -236,105 +275,137 @@
   2.main-sec
 -------------------------------------------------------------- */
 .main {
-  text-align: center;
+  //text-align: center;
   //
   // --- media-Mobile ---
   //
   @include media-Mobile {
     position: absolute;
     left: 50%;
+    width: 100%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     .main-sec {
       &__wrapper {
         position: relative;
-        margin-bottom: 50px;
+        margin-bottom: 100px;
       }
+
       &__green-border {
         position: absolute;
-        height: calc(100% + 50px);
-        width: 500px;
+        height: calc(100% + 80px);
+        width: calc(100% / 10 * 9);
         border: 2px solid $darkgreen;
         top: -50px;
         left: 50%;
+        padding-bottom: 30px;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         z-index: 0;
       }
+
       &__box-container {
-        width: 640px;
+        width: 100%;
+      }
+
+      &__box-container-sp {
+        width: 100%;
         text-align: center;
       }
+
       &__dish01 {
         &__sp {
-          width: 450px;
+          width: 100%;
           height: 260px;
+
           img {
             top: -20px;
             margin: 0;
-            width: 450px;
+            width: calc(100% / 10 * 7);
             height: 260px;
             position: relative;
             z-index: 1;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
+
       &__dish02 {
         &__sp {
-          width: 450px;
+          width: 100%;
           height: 260px;
-          margin: 0 0 0 190px;
+          text-align: right;
+
           img {
-            width: 450px;
+            width: calc(100% / 10 * 7);
             height: 260px;
             position: relative;
             z-index: 1;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
+
       &__dish03 {
         &__sp {
-          text-align:center;        
+          text-align: center;
+
           img {
             width: 580px;
             height: 335px;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
+
       &__store02 {
         &__sp {
+          width: 100%;
+          text-align: center;
+
           img {
             width: 580px;
             height: 335px;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
+
       &__text01 {
         &__sp {
           position: relative;
           background-color: $darkgreen;
           width: 580px;
           height: 120px;
-          left: calc(30px);
           display: table-cell;
           z-index: 1;
+
           &::after {
             display: block;
             position: absolute;
             top: 0;
             right: 0;
             border-left: 20px solid transparent;
-            border-bottom: 20px solid $red; 
+            border-bottom: 20px solid $red;
             transform: rotate(-90deg);
             content: "";
             z-index: 3;
           }
+
           img {
             position: absolute;
             width: 172px;
@@ -344,19 +415,28 @@
             z-index: 2;
           }
         }
-        &__pc {display:none}
+
+        &__pc {
+          display: none
+        }
       }
+
       &__text02 {
-        &__sp {          
+        &__sp {
           text-align: center;
+
           img {
-            margin: 130px 0 50px;
+            margin: 60px 0 15px;
             width: 172px;
             height: 70px;
           }
         }
-        &__pc {display:none}
+
+        &__pc {
+          display: none
+        }
       }
+
       &__text03 {
         &__sp {
           top: 50px;
@@ -364,20 +444,22 @@
           background-color: $darkgreen;
           width: 580px;
           height: 120px;
-          left: calc(30px);
+          //left: 30px;
           display: table-cell;
           z-index: 1;
+
           &::after {
             display: block;
             position: absolute;
             top: 0;
             right: 0;
             border-left: 20px solid transparent;
-            border-bottom: 20px solid $red; 
+            border-bottom: 20px solid $red;
             transform: rotate(-90deg);
             content: "";
             z-index: 3;
           }
+
           img {
             position: absolute;
             width: 172px;
@@ -387,87 +469,125 @@
             z-index: 2;
           }
         }
-        &__pc {display:none}
+
+        &__pc {
+          display: none
+        }
       }
+
       &__description01 {
-        margin: 0 auto;
-        width: 480px;
-        //height: 200px;
+        margin: 50px auto 45px;
+        width: 100%;
+        height: 200px;
+
         p {
+          margin: 0 auto;
+          width: calc(100% / 4 * 3);
           text-align: left;
-          font-family: ヒラギノ明朝 Pro;
+          font-family: "ヒラギノ明朝 Pro W3";
           color: $green;
           font-size: 20px;
         }
       }
+
       &__description02 {
-        margin: 0 auto;
-        width: 480px;
-        //height: 200px;
+        margin: 0 auto 60px;
+        width: 100%;
+
         p {
+          margin: 0 auto;
+          width: calc(100% / 4 * 3);
           text-align: left;
-          font-family: ヒラギノ明朝 Pro;
+          font-family: "ヒラギノ明朝 Pro W3";
           color: $green;
           font-size: 20px;
         }
       }
+
       &__description03 {
-        width: 480px;
+        width: 580px;
         margin: 0 auto;
-        h2{
-          width: 480px;
+
+        h2 {
+          width: 580px;
           text-align: left;
-          font-family: ヒラギノ明朝 Pro;
+          font-family: "ヒラギノ明朝 Pro W3";
           color: $darkgreen;
-          font-size: 23px;
-        }
-        p{
-          width: 480px;
-          text-align: left;
-          font-family: ヒラギノ明朝 Pro;
-          color: $green;
           font-size: 20px;
         }
+
+        p {
+          width: 580px;
+          text-align: left;
+          font-family: "ヒラギノ明朝 Pro W3";
+          color: $green;
+          font-size: 18px;
+        }
       }
+
       &__tongue {
         &__sp {
-          text-align:center;        
+          margin: 0 auto;
+
           img {
-            width: 580px;
+            width: 100%;
             height: 335px;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
+
       &__ggmap {
-        margin: 30px auto 0;
-        width: 640px;
+        margin: 55px auto 0;
+        width: 100%;
         height: 400px;
+        left: 11%;
         position: relative;
+
         iframe {
           position: absolute;
-          left: 80px;
           top: 0;
-          margin: 0 auto;
-          width: 480px;
+          width: calc(100% / 4 * 3);
           height: 260px;
         }
       }
 
       &__btn {
-        //margin: 25px auto 200px;
-        position: absolute;
-        margin-top: 300px;
-        width: 400px;
-        left: 120px;
-        font-family: "ヒラギノ角ゴ ProN";
-        background-color: $white;
-        border: 2px solid $darkgreen;
-        font-size: 30px;
-        padding: 10px 24px;
-        border-radius: 40px;
-        text-align: center;
-        color: $darkgreen;
+        &__sp {
+          margin: 60px auto 40px;
+          position: absolute;
+          margin-top: 300px;
+          width: 400px;
+          height: 88px;
+          left: 7%;
+          font-family: "ヒラギノ角ゴ ProN w6";
+          background-color: $white;
+          border: 4px solid $darkgreen;
+          font-size: 26.67px;
+          padding: 10px 24px;
+          border-radius: 50px;
+          text-align: center;
+          color: $darkgreen;
+          text-align: center;
+          padding: 20px;
+        }
+
+        &__pc {
+          display: none;
+        }
+      }
+
+      &__adjustment {
+        margin: 0 auto;
+        left: 50px;
+      }
+
+      &__adjustment02 {
+        margin: 0 auto;
+        width: 580px;
       }
     }
   }
@@ -476,277 +596,352 @@
   // --- media-Tablet & Pc ---
   //
   @include media-768 {
-    width: 1500px;
-    margin: 0 auto;
+    width: 100%;
+    //margin: 0 auto;
     .main-sec {
       &__wrapper {
         position: relative;
-        margin-bottom: 90px;
+        margin-bottom: 130px;
       }
+
       &__green-border {
         position: absolute;
-        height: calc(100% + 90px);
-        width: 1000px;
+        height: 1610px;
+        width: calc(100% / 3 * 2);
         border: 2px solid $darkgreen;
         top: -100px;
         left: 50%;
+        margin-bottom: 120px;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
         //z-index: 0;
       }
+
       &__adjustment {
-        width: 1500px;
+        width: 100%;
         height: 866px;
         text-align: center;
       }
+
       &__dish01 {
         position: relative;
-        &__sp {display: none;}
+
+        &__sp {
+          display: none;
+        }
+
         &__pc {
           float: left;
-          width: 750px;
+          width: calc(100% / 2);
           height: 433px;
+
           img {
-            width: 750px;
+            width: 100%;
             height: 433px;
             z-index: 1;
             position: relative; //x-indexを有効にするため
           }
         }
       }
+
       &__dish02 {
-        &__sp {display: none;}
+        &__sp {
+          display: none;
+        }
+
         &__pc {
-          left: 750px;
-          max-width: 750px;
-          margin-left: calc(100%/2);
+          left: calc(100% / 2);
+          max-width: calc(100% / 2);
+          margin-left: calc(100% / 2);
+
           img {
-            width: 750px;
+            width: 100%;
             height: 433px;
             z-index: 1;
             position: relative;
           }
         }
       }
+
       &__dish03 {
         &__sp {
           display: none;
         }
+
         &__pc {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 1.5rem;
-          cursor: pointer;  
+          cursor: pointer;
           position: absolute;
-          text-align:center;        
+          text-align: center;
+
           img {
             position: absolute;
             z-index: 4;
-            top: 50px;
+            top: 600px;
             left: 200px;
             width: 750px;
             height: 433px;
           }
         }
       }
+
       &__tongue {
-        &__sp {display: none;}
+        &__sp {
+          display: none;
+        }
+
         &__pc {
           display: flex;
           justify-content: center;
           align-items: center;
           font-size: 1.5rem;
-          cursor: pointer;  
+          cursor: pointer;
           position: absolute;
-          text-align:center;        
+          text-align: center;
+
           img {
             position: absolute;
             top: 50px;
-            left: 490px;
+            left: 500px;
             width: 750px;
             height: 433px;
             z-index: 3;
           }
         }
       }
+
       &__store02 {
-        &__sp {display: none;}
+        &__sp {
+          display: none;
+        }
+
         &__pc {
           margin-bottom: 50px;
-          width: 1500px;
+          width: 100%;
           text-align: center;
+
           img {
             width: 980px;
             height: 566px;
           }
         }
       }
+
       &__text01 {
-        &__sp {display:none}
+        &__sp {
+          display: none
+        }
+
         &__pc {
           position: relative;
+          float: left;
+          width: calc(100% / 2);
           background-color: $darkgreen;
-          width: 750px;
           height: 550px;
-          margin-left: calc(100%/2 - 750px);
           display: table-cell;
           z-index: 1;
           text-align: left;
+
           img {
-            margin: 225px 0 0 20px;
+            margin: 225px 0 0 calc(100% / 12.5);
             width: 172px;
-            height: 61px;  
-            z-index: 4;   
+            height: 61px;
+            z-index: 4;
+            position: relative; //x-indexを有効にするため
           }
+
           &::after {
             display: block;
             position: absolute;
             top: 0;
             right: 0;
             border-left: 30px solid transparent;
-            border-bottom: 30px solid $red; 
+            border-bottom: 30px solid $red;
             transform: rotate(-90deg);
             content: "";
             z-index: 3;
           }
         }
       }
+
       &__text02 {
-        &__sp {display:none}
+        &__sp {
+          display: none
+        }
+
         &__pc {
-          width: 1500px;
+          width: 100%;
           text-align: center;
+
           img {
-            margin: 130px 0 50px;
+            margin: 140px 0 62px;
             width: 172px;
             height: 61px;
           }
         }
       }
+
       &__text03 {
-        &__sp {display:none}
+        &__sp {
+          display: none
+        }
+
         &__pc {
           position: relative;
           background-color: $darkgreen;
-          display: table-cell;
-          width: 750px;
+          float: left;
+          width: calc(100% / 2);
           height: 550px;
           z-index: 1;
+
           img {
-            margin-left: 528px;
+            margin-left: calc(578px - 100% / 12.5);
+            left: 500px;
             margin-top: 250px;
             width: 172px;
             height: 61px;
             z-index: 4;
           }
+
           &::after {
             display: block;
             position: absolute;
             top: 0;
             right: 0;
             border-left: 30px solid transparent;
-            border-bottom: 30px solid $red; 
+            border-bottom: 30px solid $red;
             transform: rotate(-90deg);
             content: "";
             z-index: 3;
           }
         }
       }
+
       &__description01 {
         float: left;
         text-align: center;
-        width: 750px;
+        width: calc(100% / 2);
         height: 433px;
+
         p {
           width: 384px;
           height: 322px;
           margin: 50px;
           text-align: left;
-          font-family: "ヒラギノ明朝 Pro";
+          font-family: "ヒラギノ明朝 Pro w3";
           color: $green;
-          font-size: 24px;
+          font-size: 18px;
         }
       }
+
       &__description02 {
         float: left;
         text-align: center;
-        width: 750px;
+        width: calc(100% / 2);
         height: 433px;
+
         p {
           width: 384px;
           height: 322px;
           text-align: left;
-          font-family: "ヒラギノ明朝 Pro";
-          margin: 50px 0 0 316px;
+          font-family: "ヒラギノ明朝 Pro w3";
+          margin: 50px 0 50px 316px;
+          margin-left: calc(100% - 434px);
           color: $green;
-          font-size: 24px;
+          font-size: 18px;
         }
       }
+
       &__description03 {
         margin: 0 auto;
-        max-width: calc(100% - 520px);
+        width: 980px;
         left: calc(100% / 2 - 490px);
-        h2{
+
+        h2 {
           width: 980px;
           text-align: left;
-          font-family: "ヒラギノ明朝 Pro";
+          font-family: "ヒラギノ明朝 Pro W6";
           color: $darkgreen;
-          font-size: 26.67px;
+          font-size: 20px;
         }
-        p{
+
+        p {
           width: 980px;
           text-align: left;
-          font-family: "ヒラギノ明朝 Pro";
+          font-family: "ヒラギノ明朝 Pro W6";
           color: $green;
-          font-size: 24px;
+          font-size: 18px;
         }
       }
+
       &__ggmap {
-        margin: 0 auto;
-        width: 1500px;
+        margin: 50px auto 0;
+        width: 100%;
         height: 600px;
+        text-align: center;
         position: relative;
+
         iframe {
           position: absolute;
-          left: 318px;
           top: 0;
           margin: 0 auto;
+          left: calc(100% / 2 - 437px);
           width: 874px;
           height: 434px;
         }
       }
-      &__box01 {
-        display: table-cell;
-        width: 750px;
-        height: 550px;
-        background-color: $gray;
 
-      }
-      &__box02 {
-        display: table-cell;
-        width: 750px;
+      &__box01 {
+        float: left;
+        //width:inherit; //親要素の大きさを引き継ぐ
         height: 550px;
         background-color: $gray;
-        margin-left: calc(100%/2 - 750px);
+        width: calc(100% / 2)
       }
+
+      &__box02 {
+        float: left;
+        width: calc(100% / 2);
+        height: 550px;
+        background-color: $gray;
+      }
+
       &__box-container {
-        width: 1500px;
+        width: 100%;
         //overflow: hidden;
       }
+
+      &__box-container02 {
+        width: calc(100% / 2);
+        height: 500px
+      }
+
       &__btn {
-        position: absolute;
-        top: 500px;
-        left: 650px;
-        margin: 0 auto;
-        width: 200px;
-        background-color: $white;
-        border: 2px solid $green;
-        font-size: 16px;
-        padding: 10px 24px;
-        border-radius: 30px;
-        text-align: center;
+        &__sp {
+          display: none
+        }
+
+        &__pc {
+          position: absolute;
+          top: 500px;
+          left: calc(100% / 2 - 100px);
+          margin: auto;
+          width: 300px;
+          height: 66px;
+          background-color: $white;
+          color: $darkgreen;
+          border: 3px solid $green;
+          font-size: 20px;
+          font-family: "ヒラギノ明朝 Pro　W6";
+          border-radius: 40px;
+          padding: 14px;
+          font-weight: 550;
+          text-align: center;
+        }
       }
     }
   }
@@ -777,6 +972,7 @@
           content: "";
         }
       }
+
       &__box {
         width: 1500px;
         height: 550px;
@@ -786,13 +982,12 @@
 }
 
 
-
 /*--------------------------------------------------------------
   4.footer
 -------------------------------------------------------------- */
 .footer {
   margin: 0 auto;
-  width: 640px;
+  width: 100%;
 
   //
   // --- media-Mobile---
@@ -800,18 +995,22 @@
   @include media-Mobile {
     .footer-sec {
       &__footer01 {
-        top: 2300px;
+        top: 2000px;
         left: 50%;
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
+
         &__sp {
-          width: 640px;
+          width: 100%;
+
           img {
-            margin-left: calc(100% / 2 - 320px);
-            width: 640px;
-            height: 66px;  
+            width: 100%;
+            height: 66px;
             position: relative;
             top: 4000px;
           }
@@ -819,19 +1018,21 @@
       }
     }
   }
-  
+
   //
   // --- media-Tablet & Pc---
   //
   @include media-768 {
     .footer-sec {
       &__footer01 {
-        &__sp {display: none;}
+        &__sp {
+          display: none;
+        }
+
         &__pc {
           img {
-            margin-left: calc(100% / 2 - 750px);
-            width: 1500px;
-            height: 56px;  
+            width: 100%;
+            height: 56px;
           }
         }
       }
