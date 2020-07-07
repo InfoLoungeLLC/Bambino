@@ -154,6 +154,9 @@ position: absolute;
       padding-top: 23px;
       margin: 0 auto;
       text-align: center;
+      a{
+        color: $white;
+      }
     }
   }
 }
@@ -231,6 +234,9 @@ position: absolute;
       padding: 18px 24px;
       border-radius: 40px;
       text-align: center;
+      a {
+        color: $white;
+      }
     }
   }
 }
