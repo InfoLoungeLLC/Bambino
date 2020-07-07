@@ -303,7 +303,7 @@
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-        z-index: 0;
+        z-index: -1;
       }
 
       &__box-container {
@@ -616,7 +616,7 @@
         transform: translateX(-50%);
         -webkit-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
-        //z-index: 0;
+        z-index: -1;
       }
 
       &__adjustment {
@@ -930,7 +930,7 @@
         &__pc {
           position: absolute;
           top: 500px;
-          left: calc(100% / 2 - 100px);
+          left: calc(100% / 2 - 170px);
           margin: auto;
           width: 300px;
           height: 66px;
