@@ -12,7 +12,7 @@
       &__store01 {
         &__sp {
           width: 100%;
-          height: 920px;
+          height: auto;
           text-align: center;
 
           img {
@@ -184,12 +184,13 @@
 
         &__pc {
           width: 100%;
-          height: 1000px;
+          height: auto;
           text-align: center;
+          padding-bottom: 60px;
 
           img {
             width: 100%;
-            height: 960px;
+            height: auto;
             z-index: -1;
           }
         }
@@ -209,12 +210,15 @@
           position: absolute;
           text-align: center;
           top: 40px;
-          left: calc(100% / 2 - 180px);
+          width: 100%;
+          //text-align: center;
 
           img {
-            width: 360px;
-            height: 227px;
+            //width: 360px;
+            width: calc(100% / 25 * 6);
+            height: auto;
             z-index: 1;
+
           }
         }
       }
@@ -233,11 +237,12 @@
           cursor: pointer;
           position: absolute;
           top: 350px;
-          left: calc(100% / 2 - 490px);
+          width: 100%;
+          //left: calc(100% / 2 - 490px);
 
           img {
-            width: 980px;
-            height: 140px;
+            width: calc(100% / 75 * 49);
+            height: auto;
             z-index: 1;
           }
         }
@@ -275,13 +280,12 @@
   2.main-sec
 -------------------------------------------------------------- */
 .main {
-  //text-align: center;
   //
   // --- media-Mobile ---
   //
   @include media-Mobile {
-    position: absolute;
     left: 50%;
+    position: absolute;
     width: 100%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -607,7 +611,7 @@
 
       &__green-border {
         position: absolute;
-        height: 1610px;
+        height: calc(100% + 100px);
         width: calc(100% / 3 * 2);
         border: 2px solid $darkgreen;
         top: -100px;
@@ -626,23 +630,18 @@
       }
 
       &__dish01 {
-        position: relative;
-
         &__sp {
           display: none;
         }
 
         &__pc {
-          float: left;
+          position: absolute;
+          z-index: 2;
+          //float: left;
           width: calc(100% / 2);
-          height: 433px;
-
-          img {
-            width: 100%;
-            height: 433px;
-            z-index: 1;
-            position: relative; //x-indexを有効にするため
-          }
+          padding-top: 30%;
+          background-image: url("../images_pc/dish01@3x.png");
+          background-size: cover;
         }
       }
 
@@ -651,17 +650,16 @@
           display: none;
         }
 
-        &__pc {
-          left: calc(100% / 2);
-          max-width: calc(100% / 2);
-          margin-left: calc(100% / 2);
+        &__pc{
+          position: relative;
+          z-index: 2;
+          //float: left;
+          left: 50%;
+          width: calc(100% / 2);
+          padding-top: 30%;
+          background-image: url("../images_pc/dish02@3x.png");
+          background-size: cover;
 
-          img {
-            width: 100%;
-            height: 433px;
-            z-index: 1;
-            position: relative;
-          }
         }
       }
 
@@ -671,19 +669,14 @@
         }
 
         &__pc {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.5rem;
-          cursor: pointer;
           position: absolute;
-          text-align: center;
+          width: 100%;
 
           img {
             position: absolute;
             z-index: 4;
             top: 600px;
-            left: 200px;
+            left: calc(100% / 6);
             width: 750px;
             height: 433px;
           }
@@ -696,20 +689,22 @@
         }
 
         &__pc {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.5rem;
-          cursor: pointer;
+          //display: flex;
+          //justify-content: center;
+          //align-items: center;
+          ////font-size: 1.5rem;
+          //cursor: pointer;
           position: absolute;
-          text-align: center;
+          //text-align: center;
+          width: 100%;
 
           img {
             position: absolute;
             top: 50px;
-            left: 500px;
+            //left: 500px;
+            left: calc((100% / 6) + (100% / 3 * 2 - 750px));
             width: 750px;
-            height: 433px;
+            height: auto;
             z-index: 3;
           }
         }
@@ -822,37 +817,49 @@
       }
 
       &__description01 {
-        float: left;
+        //float: left;
         text-align: center;
         width: calc(100% / 2);
-        height: 433px;
+        padding-top: 30%;
+        left: 50%;
 
         p {
+          left: 50%;
           width: 384px;
           height: 322px;
           margin: 50px;
           text-align: left;
-          font-family: "ヒラギノ明朝 Pro w3";
+          font-family: ヒラギノ明朝 Pro;
+          weight: 300px;
           color: $green;
           font-size: 18px;
+          top: 0;
+          object-fit: cover;
+          position: absolute;
         }
       }
 
       &__description02 {
+        position: absolute;
         float: left;
         text-align: center;
         width: calc(100% / 2);
-        height: 433px;
+        padding-top: 30%;
 
         p {
+          position: absolute;
           width: 384px;
           height: 322px;
           text-align: left;
-          font-family: "ヒラギノ明朝 Pro w3";
+          font-family: ヒラギノ明朝 Pro;
+          weight: 300px;
           margin: 50px 0 50px 316px;
           margin-left: calc(100% - 434px);
           color: $green;
           font-size: 18px;
+          top: 0;
+          object-fit: cover;
+
         }
       }
 
@@ -902,7 +909,7 @@
         //width:inherit; //親要素の大きさを引き継ぐ
         height: 550px;
         background-color: $gray;
-        width: calc(100% / 2)
+        width: calc(100% / 2);
       }
 
       &__box02 {
@@ -913,13 +920,17 @@
       }
 
       &__box-container {
-        width: 100%;
-        //overflow: hidden;
+        position: relative;
       }
 
       &__box-container02 {
         width: calc(100% / 2);
         height: 500px
+      }
+
+      &__box-container03 {
+        width: 100%;     //body幅(green-line)
+        magin: 0 auto;
       }
 
       &__btn {
@@ -938,7 +949,7 @@
           color: $darkgreen;
           border: 3px solid $green;
           font-size: 20px;
-          font-family: "ヒラギノ明朝 Pro　W6";
+          font-family: ヒラギノ明朝 Pro　W6;
           border-radius: 40px;
           padding: 14px;
           font-weight: 550;
@@ -996,45 +1007,55 @@
   //
   @include media-Mobile {
     .footer-sec {
-      &__footer01 {
-        top: 2000px;
-        left: 50%;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-
-        &__pc {
-          display: none;
-        }
-
+      &__footer {
         &__sp {
+          padding-top: 4450px;
+          left: 50%;
+          text-aligin: center;
           width: 100%;
+          height: 65px;
 
-          img {
+          p{
+            font-family: ヒラギノ明朝 Pro, serif;
+            font-weight: 500;
+            color: $white;
+            height: 65px;
             width: 100%;
-            height: 66px;
-            position: relative;
-            top: 4450px;
+            text-align: center;
+            font-size: 18px;
+            background-color: $webshop-darkgreen;
+            padding-top: 20px;
+            left: 1000px;
           }
         }
-      }
+        &__pc {display: none}
     }
   }
+}
 
   //
   // --- media-Tablet & Pc---
   //
   @include media-768 {
     .footer-sec {
-      &__footer01 {
+      &__footer {
         &__sp {
           display: none;
         }
 
         &__pc {
-          img {
-            width: 100%;
-            height: 56px;
+          width: 100%;
+          height: 56px;
+          background-color: $darkgreen;
+          text-align: center;
+          margin-top: 100px;
+
+          p{
+            font-family: ヒラギノ明朝 Pro, serif;
+            font-weight: 600;
+            color: $white;
+            font-size: 15px;
+            padding-top: 20px;
           }
         }
       }
