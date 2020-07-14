@@ -92,7 +92,6 @@
       position: absolute;
       width: 598px;
       top: 870px;
-      //height: calc(100% - 100px);
       background-color: $webshop-darkgreen;
       margin: 0 auto;
       left: 50%;
@@ -119,7 +118,8 @@
 
       p {
         font-size: 18px;
-        font-family: ヒラギノ明朝 Pro W3;
+        font-family: ヒラギノ明朝 Pro, serif;
+        font-weight: 300;
         color: $white;
         text-align: left;
         margin-top: 0;
@@ -130,7 +130,8 @@
       margin: 0 auto;
       p {
         font-size: 26px;
-        font-family: ヒラギノ明朝 Pro W3;
+        font-family: ヒラギノ明朝 Pro, serif;
+        font-weight: 300;
         color: $white;
         text-align: center;
       }
@@ -159,7 +160,8 @@
       background-color: $green;
       font-size: 26.7px;
       color: $white;
-      font-family: "ヒラギノ角ゴPro w3";
+      font-family: ヒラギノ角ゴProN;
+      font-weight: 300;
       border-radius: 44px;
       padding-top: 23px;
       margin: 0 auto;
@@ -209,7 +211,8 @@
       margin: 0 auto;
       p {
         font-size: 20px;
-        font-family: ヒラギノ明朝 Pro W3;
+        font-family: ヒラギノ明朝 Pro, serif;
+        font-weight: 300;
         color: $white;
         text-align: left;
         margin-top: 0;
@@ -220,7 +223,8 @@
       margin: 0 auto;
       p {
         font-size: 28px;
-        font-family: ヒラギノ明朝 Pro W6;
+        font-family: ヒラギノ明朝 Pro, serif;
+        font-weight: 600;
         color: $white;
         text-align: center;
       }
@@ -248,7 +252,8 @@
       background-color: $green;
       font-size: 20px;
       color: $white;
-      font-family: "ヒラギノ角ゴProN W6";
+      font-family: ヒラギノ角ゴProN;
+      font-weight: 600;
       padding: 18px 24px;
       border-radius: 40px;
       text-align: center;
@@ -277,7 +282,8 @@
         height: 65px;
 
         p{
-          font-family: ヒラギノ明朝 Pro　W6;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
           color: $white;
           height: 65px;
           width: 100%;
@@ -290,7 +296,7 @@
     }
   }
 }
-  
+
 //
 // --- media-Tablet & Pc---
 //
@@ -307,7 +313,8 @@
         background-color: $webshop-darkgreen;
 
         p{
-          font-family: ヒラギノ明朝 Pro　W6;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
           color: $white;
           font-size: 15px;
         }
