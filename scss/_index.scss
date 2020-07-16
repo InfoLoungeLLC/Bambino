@@ -3,6 +3,7 @@
 -------------------------------------------------------------- */
 .header {
   text-align: center;
+  margin-bottom: 100px;
   //
   // --- media-Mobile ---
   //
@@ -182,15 +183,12 @@
 
         &__pc {
           width: 100%;
-          height: auto;
+          padding-top: 64%;
           text-align: center;
-          padding-bottom: 60px;
-
-          img {
-            width: 100%;
-            height: auto;
-            z-index: -1;
-          }
+          z-index: -1;
+          background-image: url("../images_pc/store01@3x.png");
+          background-size:contain;
+          padding-botton: 100px;
         }
       }
 
@@ -209,6 +207,7 @@
           text-align: center;
           top: 40px;
           width: 100%;
+          z-index: 1;
 
           img {
             width: calc(100% / 25 * 6);
@@ -232,7 +231,7 @@
           border-radius: 50%;
           cursor: pointer;
           position: absolute;
-          top: 350px;
+          top: calc(23vw);
           width: 100%;
 
           img {
@@ -251,7 +250,7 @@
         position: absolute;
         height: 220px;
         width: 360px;
-        top: 580px;
+        top: calc(36vw);
         left: calc(100% / 2 - 180px);
 
         p {
@@ -260,6 +259,7 @@
           font-weight: 300;
           color: white;
           font-size: 20px;
+
         }
       }
 
@@ -610,7 +610,7 @@
         height: calc(100% + 100px);
         width: calc(100% / 3 * 2);
         border: 2px solid $darkgreen;
-        top: -100px;
+        top: -50px;
         left: 50%;
         margin-bottom: 120px;
         transform: translateX(-50%);
