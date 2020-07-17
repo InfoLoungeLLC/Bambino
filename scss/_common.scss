@@ -1,0 +1,149 @@
+/*--------------------------------------------------------------
+  common Style
+-------------------------------------------------------------- */
+html {
+  //font-size: #{$baseFontSize}px;
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  @include fontFamilyBase;
+  background-color: $white;
+  font-size: 1.6rem;
+  margin: 0;
+  & * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  & *:before,
+  & *:after {
+    box-sizing: inherit;
+  }
+}
+
+p {
+  //margin: 0;
+  font-size: 1.7rem;
+  color: $black;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  line-height: 1.7em;
+  @include media-425{
+    font-size: 1.5rem;
+  }
+}
+
+a {
+  margin: 0;
+  color: $black;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: block;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+}
+
+dl,
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+dl dd,
+dl li,
+ul dd,
+ul li,
+ol li{
+  position: relative;
+  font-family: "Noto Sans CJK JP";
+  background-color: $white;
+  font-size: 17px;
+  margin: 0;
+  & * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  & *:before,
+  & *:after {
+    box-sizing: inherit;
+  }
+}
+
+main {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+h3,h4 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: $black;
+  padding: 0;
+  margin: 0;
+  @include media-425{
+    font-size: 2.0rem;
+  }
+  @include media-375{
+    font-size: 1.8rem;
+  }
+  @include media-1024{
+    font-size: 3.2rem;
+  }
+}
+
+h5 {
+  font-size: 2.0rem;
+  font-weight: 700;
+  padding: 0;
+  margin: 0;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+i{
+  font-style: italic;
+}
+
+span{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  margin: 0;
+  padding: 0;
+  border-style: none;
+  background: none;
+}
+
