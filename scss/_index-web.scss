@@ -182,7 +182,7 @@
   .main-sec {
     &__wrapper {
       position: absolute;
-      width: 980px;
+      width: calc(100% / 10 * 9);
       height: 1400px;
       background-color: $webshop-darkgreen;
       margin: 0 auto;
