@@ -12,6 +12,7 @@
       &__main-img {
         width: 100%;
         padding-top: 143%;
+        min-padding-top: 1000px;
         position: relative;
         text-align: center;
         background-size: contain;
@@ -51,6 +52,29 @@
           width: 66%;
           font-family: ヒラギノ角ゴ Pro, serif;
           font-weight: 600;
+          color: white;
+        }
+      }
+    }
+  }
+
+  //
+  // --- sp(375px以下) ---
+  //
+
+  @include media-320 {
+    .header-sec {
+
+      &__description {
+        position: absolute;
+        top: 95vw;
+
+        p {
+          margin: 0 auto;
+          width: 80%;
+          font-family: ヒラギノ角ゴ Pro, serif;
+          font-weight: 600;
+          font-size: 13px;
           color: white;
         }
       }
@@ -149,6 +173,7 @@
         width: 95%;
         margin: 0 auto;
         background-color: white;
+        padding-bottom: 40px;
       }
 
       &__description {
@@ -168,20 +193,21 @@
           width: 90%;
           font-weight: 600;
           font-family: ヒラギノ角ゴ Pro, serif;
-          font-size: 30px;
+          font-size: 18pt;
           color: $darkred;
           margin: 0 auto;
+          margin-top: 13px;
         }
 
         //english-support
         h4 {
-          font-weight: 600;
+          font-weight: 500;
           font-family: GraniteNormal◆;
           font-size: 16pt;
           color: $red;
           margin-bottom: 10vw;
           line-height: 20pt;
-          background-color: rgba(250, 0, 0, 0.3);
+          background-color: rgba(250, 0, 0, 0.2);
           display: inline-block;
         }
 
@@ -189,8 +215,9 @@
         h5 {
           font-weight: 600;
           font-family: ヒラギノ角ゴ Pro, serif;
-          font-size: 20px;
+          font-size: 13pt;
           color: $darkred;
+          margin-top: 13px;
         }
 
         p {
@@ -200,12 +227,27 @@
           font-weight: 600;
           font-family: ヒラギノ角ゴ Pro, serif;
           font-size: 18px;
+          color: $brown;
+          margin-top: 13px;
         }
 
         img {
           width: 90%;
           height: auto;
         }
+
+        hr {
+          width: 90%;
+          border-width: 2px 0px 0px 0px;
+          border-style: solid;
+          border-color: $red;
+          height: 1px;         //高さ(※古いIE用)
+          margin: 20px auto 30px;
+        }
+      }
+
+      &__blank {
+        height: 3vw;
       }
 
       &__choice {
@@ -213,7 +255,6 @@
         height: 40vw;
         margin: 0 auto;
         position: relative;
-
 
         img {
           width: 40%;
@@ -263,6 +304,7 @@
           text-align: center;
 
           img {
+            margin: 50px 0;
             width: 33%;
             height: auto;
           }
@@ -273,6 +315,7 @@
         width: 66%;
         margin: 0 auto;
         background-color: white;
+        padding-bottom: 3vw;
       }
 
 
@@ -294,7 +337,7 @@
           font-family: ヒラギノ角ゴ Pro, serif;
           font-size: 30px;
           color: $darkred;
-          margin: 0 auto;
+          margin: 2vw auto 0;
         }
 
         //english-support
@@ -303,6 +346,8 @@
           font-size: 24px;
           color: $red;
           margin-bottom: 4vw;
+          background-color: rgba(250, 0, 0, 0.2);
+          display: inline-block;
         }
 
         //money
@@ -311,21 +356,41 @@
           font-family: ヒラギノ角ゴ Pro, serif;
           font-size: 20px;
           color: $darkred;
+          margin-top: 2vw;
         }
 
         p {
-          width: 50%;
           text-align: left;
-          margin: 0 auto;
+          margin: 2vw auto 0;
           font-weight: 600;
           font-family: ヒラギノ角ゴ Pro, serif;
           font-size: 18px;
+          color: $brown;
+          display: inline-block;
+          max-width: 50%;
         }
 
         img {
           width: 90%;
           height: auto;
         }
+
+        hr {
+          width: 90%;
+          border-width: 2px 0px 0px 0px;
+          border-style: solid;
+          border-color: $red;
+          height: 1px;         //高さ(※古いIE用)
+          margin: 40px auto 60px;
+        }
+      }
+
+      &__adjustment {
+        width: 100%;
+      }
+
+      &__blank {
+        height: 3vw;
       }
 
       &__choice {
