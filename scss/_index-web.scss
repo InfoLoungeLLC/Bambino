@@ -1,6 +1,7 @@
 .body {
   background-color: $webshop-green;
 }
+
 /*--------------------------------------------------------------
 1.header
 -------------------------------------------------------------- */
@@ -10,32 +11,44 @@
   //
   @include media-Mobile {
     .header-sec {
+
+      &__wrapper {
+
+      }
       &__tongue {
         &__sp {
+          position: relative;
           width: 100%;
-          text-align: center;
-          height: 920px;
-          img{
-            position: relative;
+          height: auto;
+          margin: 0 auto;
+
+          img {
             width: 100%;
-            height: 920px;
-            z-index: 0;
+            height: auto;
+            z-index: 1;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
+
       &__logo {
         &__sp {
           img {
             position: absolute;
-            width: 316px;
-            height: 48px;
-            top: 20px;
-            left: 10px;
+            width: 50%;
+            height: auto;
+            top: 1vw;
+            left: 0.3vw;
             z-index: 2;
           }
         }
-        &__pc {display: none;}
+
+        &__pc {
+          display: none;
+        }
       }
     }
   }
@@ -43,36 +56,44 @@
   //
   // --- media-Tablet & Pc ---
   //
-  @include media-768{
-      .header-sec {
-          &__tongue {
-              &__sp {display: none;}
-              &__pc {
-                  width: 100%;
-                  height: auto;
-                  margin: 0 auto;
-                  img{
-                      position: relative;
-                      width: 100%;
-                      height: auto;
-                      z-index: 1;
-                  }
-              }
+  @include media-768 {
+    .header-sec {
+      &__tongue {
+        &__sp {
+          display: none;
+        }
+
+        &__pc {
+          position: relative;
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+
+          img {
+            width: 100%;
+            height: auto;
+            z-index: 1;
           }
-          &__logo {
-              &__sp {display: none;}
-              &__pc {
-                  img {
-                      position: absolute;
-                      width: 316px;
-                      height: 48px;
-                      top: 20px;
-                      left: 10px;
-                      z-index: 2;
-                  }
-              }
-          }
+        }
       }
+
+      &__logo {
+        &__sp {
+          display: none;
+        }
+
+        &__pc {
+          img {
+            position: absolute;
+            width: 20%;
+            height: auto;
+            top: 1vw;
+            left: 0.3vw;
+            z-index: 2;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -81,244 +102,373 @@
 -------------------------------------------------------------- */
 .main {
 
-//
-// --- media-Mobile ---
-//
-@include media-Mobile {
-
-
-  .main-sec {
-    &__wrapper {
-      position: absolute;
-      width: 598px;
-      top: 870px;
-      background-color: $webshop-darkgreen;
-      margin: 0 auto;
-      left: 50%;
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      z-index: 3;
-    }
-    &__text01 {
-      &__sp {          
+  //
+  // --- media-Mobile ---
+  //
+  @include media-Mobile {
+    .main-sec {
+      &__wrapper {
+        width: 90%;
+        background-color: $webshop-darkgreen;
         margin: 0 auto;
-        width: 480px;
-        img {
-          margin: 50px 0;
-          width: 480px;
-          height: 96px;
+        position: absolute;
+        top: 130vw;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+      }
+
+      &__text01 {
+        &__sp {
+          width: 100%;
+          text-align: center;
+
+          img {
+            margin: 50px 0;
+            width: 80%;
+            height: auto;
+          }
+        }
+
+        &__pc {
+          display: none;
         }
       }
-      &__pc {display: none;}
-    }
-    &__description01 {
-      width: 400px;
-      margin: 0 auto;
 
-      p {
-        font-size: 18px;
-        font-family: ヒラギノ明朝 Pro, serif;
-        font-weight: 300;
-        color: $white;
-        text-align: left;
-        margin-top: 0;
-      }
-    }
-    &__description02 {
-      width: 480px;
-      margin: 0 auto;
-      p {
-        font-size: 26px;
-        font-family: ヒラギノ明朝 Pro, serif;
-        font-weight: 300;
-        color: $white;
-        text-align: center;
-      }
-    }
-    &__image {
-      &__sp {          
+      &__description01 {
         width: 100%;
-        text-align: center;
-        img {
-          margin: 20px 0 30px;
-          width: 558px;
-          height: 372px;
+
+        p {
+          width: 70%;
+          high: auto;
+          font-size: 18px;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 300;
+          color: $white;
+          text-align: left;
+          margin: 0 auto;
         }
       }
-      &__pc {display: none}
-    }
-    &__adjustment {
-      padding-top: 36px;
-      padding-bottom: 60px;
-      width: 100%;
-    }
-    &__btn {
-      height: 88px;
-      width: 400px;
-      background-color: $green;
-      font-size: 26.7px;
-      color: $white;
-      font-family: ヒラギノ角ゴProN;
-      font-weight: 300;
-      border-radius: 44px;
-      padding-top: 23px;
-      margin: 0 auto;
-      text-align: center;
-      a{
-        color: $white;
-      }
-    }
-  }
-}
-//
-// --- media-Tablet & Pc ---
-//
-@include media-768 {
-  width: 100%;
-  background-color: $webshop-green;
 
-  .main-sec {
-    &__wrapper {
-      position: absolute;
-      width: calc(100% / 10 * 9);
-      height: 1400px;
-      background-color: $webshop-darkgreen;
-      margin: 0 auto;
-      left: 50%;
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-      z-index: 3;
-      top: calc(100% - 100px);
-    }
-    &__text01 {
-      &__sp {display: none;}
-      &__pc {
+      &__description02 {
+        width: 100%;
         margin: 0 auto;
-        width: 550px;
-        img {
-          margin: 80px 0;
-          width: 550px;
-          height: 110px;
 
+        p {
+          width: 80%;
+          font-size: 20px;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 300;
+          color: $white;
+          text-align: center;
+          margin: 0 auto;
         }
       }
-    }
-    &__description01 {
-      width: 480px;
-      margin: 0 auto;
-      p {
-        font-size: 20px;
-        font-family: ヒラギノ明朝 Pro, serif;
+
+      &__image {
+        &__sp {
+          width: 100%;
+          text-align: center;
+
+          img {
+            margin: 20px 0 30px;
+            width: 90%;
+            height: auto;
+          }
+        }
+
+        &__pc {
+          display: none
+        }
+      }
+
+      &__adjustment {
+        padding-top: 36px;
+        padding-bottom: 60px;
+        width: 100%;
+      }
+
+      &__btn {
+        height: 88px;
+        width: 80%;
+        max-width: 300px;
+        background-color: $green;
+        font-size: 26.7px;
+        color: $white;
+        font-family: ヒラギノ角ゴProN;
         font-weight: 300;
-        color: $white;
-        text-align: left;
-        margin-top: 0;
-      }
-    }
-    &__description02 {
-      width: 500px;
-      margin: 0 auto;
-      p {
-        font-size: 28px;
-        font-family: ヒラギノ明朝 Pro, serif;
-        font-weight: 600;
-        color: $white;
-        text-align: center;
-      }
-    }
-    &__image {
-      &__sp {display: none}
-      &__pc {
-        width: 790px;
+        border-radius: 44px;
+        padding-top: 23px;
         margin: 0 auto;
-        img {
-          margin: 50px 0;
-          width: 790px;
-          height: 526px;
+        text-align: center;
+
+        a {
+          color: $white;
         }
       }
     }
-    &__adjustment {
-      width: 300px;
-      margin: 50px auto;
-    }
-    &__btn {
-      position: absolute;
-      width: 300px;
-      height: 66px;
-      background-color: $green;
-      font-size: 20px;
-      color: $white;
-      font-family: ヒラギノ角ゴProN;
-      font-weight: 600;
-      padding: 18px 24px;
-      border-radius: 40px;
-      text-align: center;
-      a {
+  }
+
+  //
+  // --- media-375px ---
+  //
+  @include media-375 {
+    .main-sec {
+      &__btn {
+        height: 80px;
+        width: 80%;
+        background-color: $green;
+        font-size: 17pt;
         color: $white;
+        font-family: ヒラギノ角ゴProN;
+        font-weight: 300;
+        border-radius: 44px;
+        padding-top: 23px;
+        margin: 0 auto;
+        text-align: center;
+
+        a {
+          color: $white;
+        }
       }
     }
   }
-}
+  //
+  // --- media-Tablet & Pc ---
+  //
+  @include media-768 {
+    width: 100%;
+    background-color: $webshop-green;
+
+    .main-sec {
+      &__wrapper {
+        position: absolute;
+        width: 90%;
+        padding-bottom: 120px;
+        background-color: $webshop-darkgreen;
+        z-index: 3;
+        top: 60vw;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+      }
+
+      &__text01 {
+        &__sp {
+          display: none;
+        }
+
+        &__pc {
+        text-align: center;
+
+          img {
+            margin: 80px 0;
+            max-width: 550px;
+            max-height: 110px;
+            width: 50%;
+            height: auto;
+
+          }
+        }
+      }
+
+      &__description01 {
+        max-width: 480px;
+        margin: 0 auto;
+        width: 45%;
+        height: auto;
+
+        p {
+          font-size: 20px;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 300;
+          color: $white;
+          text-align: left;
+          margin-top: 0;
+        }
+      }
+
+      &__description02 {
+        max-width: 500px;
+        margin: 0 auto;
+        width: 33%;
+        height: auto;
+
+        p {
+          font-size: 28px;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
+          color: $white;
+          text-align: center;
+        }
+      }
+
+      &__image {
+        &__sp {
+          display: none
+        }
+
+        &__pc {
+          margin: 0 auto;
+          text-align: center;
+
+          img {
+            margin: 50px 0;
+            max-width: 790px;
+            max-height: 526px;
+            width: 80%;
+            height: auto;
+
+          }
+        }
+      }
+
+      &__adjustment {
+        width: 300px;
+        margin: 50px auto;
+      }
+
+      &__btn {
+        position: absolute;
+        width: 300px;
+        height: 66px;
+        background-color: $green;
+        font-size: 20px;
+        color: $white;
+        font-family: ヒラギノ角ゴProN;
+        font-weight: 600;
+        padding: 18px 24px;
+        border-radius: 40px;
+        text-align: center;
+
+        a {
+          color: $white;
+        }
+      }
+
+      &__footer {
+        width: 100%;
+        height: 56px;
+        background-color: $webshop-darkgreen;
+        text-align: center;
+
+        p {
+          margin: 0 auto;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
+          color: $white;
+          font-size: 15px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
 }
 
 /*--------------------------------------------------------------
 3.footer
 -------------------------------------------------------------- */
 .footer {
-//
-// --- media-Mobile---
-//
-@include media-Mobile {
-  .footer-sec {
-    &__footer {
-      &__sp {
-        padding-top: 1100px;
-        width: 100%;
-        text-align: center;
-        height: 65px;
 
-        p{
+  //
+  // --- media-Mobile---
+  //
+  @include media-Mobile {
+    .footer-sec {
+      &__footer {
+        width: 100%;
+        height: 65px;
+        background-color: $webshop-darkgreen;
+        text-aligin: center;
+        position: absolute;
+        top: 380vw;
+
+        p {
+          margin: 0 auto;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 600;
           color: $white;
-          height: 65px;
-          width: 100%;
           font-size: 18px;
-          background-color: $webshop-darkgreen;
+          width: 290px;
           padding-top: 20px;
         }
       }
-      &__pc {display: none}
     }
   }
-}
 
-//
-// --- media-Tablet & Pc---
-//
-@include media-768 {
-  .footer-sec {
-    &__footer {
-      &__sp {display: none;}
-      &__pc {
+  //
+  // --- media-350px ---
+  //
+  @include media-350 {
+    .footer-sec {
+      &__footer {
+        width: 100%;
+        height: 65px;
+        background-color: $webshop-darkgreen;
+        text-aligin: center;
         position: absolute;
+        top: 250vh;
+
+        p {
+          margin: 0 auto;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
+          color: $white;
+          font-size: 18px;
+          width: 290px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+
+  //
+  // --- media-Tablet & Pc---
+  //
+  @include media-768 {
+    .footer-sec {
+      &__footer {
         width: 100%;
         height: 56px;
-        text-align: center;
-        top: calc(100% + 1400px);
         background-color: $webshop-darkgreen;
+        text-align: center;
+        margin-top: 150vh;
 
-        p{
+        p {
+          margin: 0 auto;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 600;
           color: $white;
           font-size: 15px;
+          padding-top: 20px;
         }
       }
     }
   }
-}
+
+  //
+  // --- media-Tablet & Pc 1400px---
+  //
+  @include media-1400 {
+    .footer-sec {
+      &__footer {
+        width: 100%;
+        height: 56px;
+        background-color: $webshop-darkgreen;
+        text-align: center;
+        margin-top: 1350px;
+
+        p {
+          margin: 0 auto;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
+          color: $white;
+          font-size: 15px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
 }
