@@ -3,21 +3,21 @@
 -------------------------------------------------------------- */
 .header {
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 10vw;
   //
   // --- media-Mobile ---
   //
   @include media-Mobile {
+    overflow: hidden;
     width: 100%;
     .header-sec {
       &__store01 {
         &__sp {
-          width: 100%;
-          height: 920px;
-          text-align: center;
-          z-index: -1;
-          background-image: url("../images_sp/store01.png");
-          background-size: cover;
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
 
         &__pc {
@@ -27,17 +27,16 @@
 
       &__logo {
         &__sp {
-          justify-content: center;
-          align-items: center;
-          position: absolute;
-          top: 35px;
-          width: 100%;
-
           img {
-            width: 276px;
-            height: 174px;
-            z-index: 1;
-            margin: 0 auto;
+            width: 45%;
+            height: auto;
+            top: 5vw;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            z-index: 2;
           }
         }
 
@@ -48,15 +47,16 @@
 
       &__catch-phrase {
         &__sp {
-          position: absolute;
-          top: 267px;
-          width: 100%;
-
           img {
-            width: 90%;
+            width: 80%;
             height: auto;
-            margin: 0 auto;
-            z-index: 1;
+            top: 40vw;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            z-index: 2;
           }
         }
 
@@ -66,22 +66,50 @@
       }
 
       &__description {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        position: absolute;
-        height: 265px;
-        top: 555px;
-        left: calc(50% - 180px);
 
         p {
           text-align: left;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 300;
-          width: 360px;
           color: white;
-          font-size: 22px;
+          font-size: 12pt;
+          width: 75%;
+          height: auto;
+          top: 78vw;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          z-index: 2;
+        }
+      }
+    }
+  }
+
+  //
+  // --- media-Mobile -350px --
+  //
+  @include media-350 {
+    overflow: hidden;
+    width: 100%;
+    .header-sec {
+      &__description {
+        p {
+          text-align: left;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 300;
+          color: white;
+          font-size: 10pt;
+          width: 75%;
+          height: auto;
+          top: 78vw;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          z-index: 2;
         }
       }
     }
@@ -93,120 +121,38 @@
   @include media-768 {
     width: 100%;
     .header-sec {
-      &__nav {
-        position: absolute;
-        z-index: 1;
-        height: 100vh;
-        width: 100%;
-        left: -100%;
-        background: rgba(99, 99, 99, .95);
-        -webkit-transition: 1.5s;
-        transition: 1.5s;
-      }
-
-      &__target-inner {
-        z-index: 1;
-        width: 40px;
-        height: 30px;
-        position: absolute;
-        left: 1370px;
-        top: 10px;
-
-        &__1 {
-          display: block;
-          width: 66px;
-          height: 1px;
-          background: $white;
-          -webkit-transition: 1.5s;
-          transition: 1.5s;
-          border-radius: 50px;
-          position: absolute;
-          top: 0;
-        }
-
-        &__2 {
-          display: block;
-          width: 66px;
-          height: 1px;
-          background: $white;
-          -webkit-transition: 1.5s;
-          transition: 1.5s;
-          border-radius: 50px;
-          position: absolute;
-          top: 13px;
-        }
-
-        &__3 {
-          display: block;
-          width: 66px;
-          height: 1px;
-          background: $white;
-          -webkit-transition: 1.5s;
-          transition: 1.5s;
-          border-radius: 50px;
-          position: absolute;
-          top: 26px;
-        }
-
-        &__a {
-          background: #ffffff;
-          -webkit-transform: rotate(225deg);
-          transform: rotate(225deg);
-          top: 13px;
-        }
-
-        &__b {
-          background: #ffffff;
-          opacity: 0;
-        }
-
-        &__c {
-          background: #ffffff;
-          -webkit-transform: rotate(-225deg);
-          transform: rotate(-225deg);
-          top: 13px;
-        }
-      }
 
       &__store01 {
         &__sp {
           display: none;
         }
-
         &__pc {
-          width: 100%;
-          padding-top: 64%;
-          text-align: center;
-          z-index: -1;
-          background-image: url("../images_pc/store01@3x.jpg");
-          background-size:contain;
-          padding-botton: 100px;
+          position: relative;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
 
       &__logo {
         &__sp {
-          display: none;
+          img {
+            width: 20%;
+            min-width: 200px;
+            height: auto;
+            top: 3vw;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            z-index: 2;
+          }
         }
 
         &__pc {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.5rem;
-          cursor: pointer;
-          position: absolute;
-          text-align: center;
-          top: 40px;
-          width: 100%;
-          z-index: 1;
-
-          img {
-            width: 24%;
-            height: auto;
-            z-index: 1;
-
-          }
+          display: none;
         }
       }
 
@@ -216,49 +162,39 @@
         }
 
         &__pc {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 1.5rem;
-          border-radius: 50%;
-          cursor: pointer;
-          position: absolute;
-          top: calc(23vw);
-          width: 100%;
-
           img {
-            width: 65%;
+            width: 70%;
+            min-width: 750px;
             height: auto;
-            z-index: 1;
+            top: 20vw;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            z-index: 2;
           }
         }
       }
 
       &__description {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        position: absolute;
-        height: 220px;
-        width: 360px;
-        top: calc(36vw);
-        left: calc(50% - 180px);
-
         p {
           text-align: left;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 300;
           color: white;
-          font-size: 20px;
-
+          font-size: 17pt;
+          width: 60%;
+          min-width: 700px;
+          height: auto;
+          top: 35vw;
+          left: 50%;
+          position: absolute;
+          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          z-index: 2;
         }
-      }
-
-      /* 動き */
-      &__fadein {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
       }
     }
   }
@@ -272,44 +208,17 @@
   // --- media-Mobile ---
   //
   @include media-Mobile {
-    position: absolute;
+    overflow: hidden;
     width: 100%;
     .main-sec {
-      &__wrapper {
-        position: relative;
-        margin-bottom: 100px;
-      }
-
-      &__green-border {
-        position: absolute;
-        height: calc(100% + 80px);
-        width: 90%;
-        border: 2px solid $darkgreen;
-        top: -50px;
-        left: 50%;
-        padding-bottom: 30px;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        z-index: -1;
-      }
-
-      &__box-container {
-        width: 100%;
-      }
-
-      &__box-container-sp {
-        width: 100%;
-        text-align: center;
-      }
 
       &__dish01 {
         &__sp {
-          width: 66%;
-          padding-top: 60%;
-          background-image: url("../images_sp/dish01.png");
-          background-size: cover;
           z-index: 2;
+          img {
+            width: 66%;
+            height: auto;
+          }
         }
 
         &__pc {
@@ -319,12 +228,12 @@
 
       &__dish02 {
         &__sp {
-          margin: 0 0 0 auto;
-          width: 66%;
-          padding-top: 50%;
-          background-image: url("../images_sp/dish02.png");
-          background-size: cover;
           z-index: 2;
+          text-align: right;
+          img {
+            width: 66%;
+            height: auto;
+          }
         }
 
         &__pc {
@@ -353,8 +262,8 @@
           text-align: center;
 
           img {
-            width: 580px;
-            height: 335px;
+            width: 90%;
+            height: auto;
           }
         }
 
@@ -452,29 +361,15 @@
         }
       }
 
-      &__description01 {
-        margin: 50px auto 45px;
-        width: 100%;
-        height: 200px;
-
-        p {
-          margin: 0 auto;
-          width: 75%;
-          text-align: left;
-          font-family: ヒラギノ明朝 Pro, serif;
-          font-weight: 300;
-          color: $green;
-          font-size: 20px;
-        }
-      }
-
+      &__description01,
       &__description02 {
-        margin: 150px auto 60px;
         width: 100%;
 
         p {
           margin: 0 auto;
-          width: 75%;
+          padding: 20px 10px;
+          width: 80%;
+          height: auto;
           text-align: left;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 300;
@@ -484,10 +379,10 @@
       }
 
       &__description03 {
-        width: 580px;
+        width: 90%;
         margin: 0 auto;
         h2 {
-          width: 580px;
+          width: 100%;
           text-align: left;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 600;
@@ -496,7 +391,7 @@
           margin-block-end: 40px;
         }
         p {
-          width: 580px;
+          width: 100%;
           text-align: left;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 300;
@@ -505,6 +400,18 @@
           line-height: 35px;
           margin-block-end: 40px;
         }
+      }
+
+      &__box-container {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+      }
+
+      &__box-container-sp {
+        width: 90%;
+        height: auto;
+        margin: 50px auto;
       }
 
       &__tongue {
@@ -543,12 +450,10 @@
           position: absolute;
           margin-top: 300px;
           width: 80%;
-          //height: 88px;
           font-family: ヒラギノ明朝 Pro, serif;
           font-weight: 600;
           background-color: $white;
           border: 4px solid $darkgreen;
-          //font-size: 26.67px;
           padding: 10px 24px;
           border-radius: 50px;
           text-align: center;
@@ -561,320 +466,6 @@
           display: none;
         }
       }
-
-      &__adjustment {
-        margin: 0 auto;
-        //left: 50px;
-        width: 100%;
-      }
-
-      &__adjustment02 {
-        margin: 0 auto;
-        width: 580px;
-      }
-    }
-  }
-
-  @include media-580 {
-    position: absolute;
-    width: 100%;
-    .main-sec {
-      &__wrapper {
-        position: relative;
-        margin-bottom: 100px;
-      }
-
-      &__green-border {
-        position: absolute;
-        height: calc(100% + 80px);
-        width: 90%;
-        border: 2px solid $darkgreen;
-        top: -50px;
-        left: 50%;
-        padding-bottom: 30px;
-        transform: translateX(-50%);
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        z-index: -1;
-      }
-
-      &__box-container {
-        width: 100%;
-      }
-
-      &__box-container-sp {
-        width: 100%;
-        text-align: center;
-      }
-
-      &__dish01 {
-        &__sp {
-          width: 66%;
-          padding-top: 60%;
-          background-image: url("../images_sp/dish01.png");
-          background-size: cover;
-          z-index: 2;
-        }
-
-        &__pc {
-          display: none;
-        }
-      }
-
-      &__dish02 {
-        &__sp {
-          margin: 0 0 0 auto;
-          width: 66%;
-          padding-top: 50%;
-          background-image: url("../images_sp/dish02.png");
-          background-size: cover;
-          z-index: 2;
-        }
-
-        &__pc {
-          display: none;
-        }
-      }
-
-      &__dish03 {
-        &__sp {
-          text-align: center;
-
-          img {
-            width: 100%;
-            height: 335px;
-          }
-        }
-
-        &__pc {
-          display: none;
-        }
-      }
-
-      &__store02 {
-        &__sp {
-          width: 100%;
-          text-align: center;
-
-          img {
-            width: 100%;
-            height: 335px;
-          }
-        }
-
-        &__pc {
-          display: none;
-        }
-      }
-
-      &__text01 {
-        &__sp {
-          position: relative;
-          background-color: $darkgreen;
-          //width: 100px;
-          height: 120px;
-          display: table-cell;
-          z-index: 1;
-
-          &::after {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            border-left: 20px solid transparent;
-            border-bottom: 20px solid $red;
-            transform: rotate(-90deg);
-            content: "";
-            z-index: 3;
-          }
-
-          img {
-            position: absolute;
-            width: 172px;
-            height: 61px;
-            top: 29.5px;
-            left: calc(50% - 86px);
-            z-index: 2;
-          }
-        }
-
-        &__pc {
-          display: none
-        }
-      }
-
-      &__text02 {
-        &__sp {
-          text-align: center;
-
-          img {
-            margin: 60px 0 15px;
-            width: 172px;
-            height: 70px;
-          }
-        }
-
-        &__pc {
-          display: none
-        }
-      }
-
-      &__text03 {
-        &__sp {
-          top: 50px;
-          position: relative;
-          background-color: $darkgreen;
-          height: 120px;
-          display: table-cell;
-          z-index: 1;
-
-          &::after {
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 0;
-            border-left: 20px solid transparent;
-            border-bottom: 20px solid $red;
-            transform: rotate(-90deg);
-            content: "";
-            z-index: 3;
-          }
-
-          img {
-            position: absolute;
-            width: 172px;
-            height: 61px;
-            top: 29.5px;
-            left: calc(50% - 86px);
-            z-index: 2;
-          }
-        }
-
-        &__pc {
-          display: none
-        }
-      }
-
-      &__description01 {
-        margin: 50px auto 45px;
-        width: 100%;
-        height: 200px;
-
-        p {
-          margin: 0 auto;
-          width: 75%;
-          text-align: left;
-          font-family: ヒラギノ明朝 Pro, serif;
-          font-weight: 300;
-          color: $green;
-          font-size: 20px;
-        }
-      }
-
-      &__description02 {
-        margin: 150px auto 60px;
-        width: 100%;
-
-        p {
-          margin: 0 auto;
-          width: 75%;
-          text-align: left;
-          font-family: ヒラギノ明朝 Pro, serif;
-          font-weight: 300;
-          color: $green;
-          font-size: 20px;
-        }
-      }
-
-      &__description03 {
-        width: 90%;
-        margin: 0 auto;
-        h2 {
-          width: 100%;
-          text-align: left;
-          font-family: ヒラギノ明朝 Pro, serif;
-          font-weight: 600;
-          color: $darkgreen;
-          font-size: 20px;
-          margin-block-end: 40px;
-        }
-        p {
-          width: 100%;
-          text-align: left;
-          font-family: ヒラギノ明朝 Pro, serif;
-          font-weight: 300;
-          color: $green;
-          font-size: 18px;
-          line-height: 35px;
-          margin-block-end: 40px;
-        }
-      }
-
-      &__tongue {
-        &__sp {
-          margin: 0 auto;
-
-          img {
-            width: 100%;
-            height: 335px;
-          }
-        }
-
-        &__pc {
-          display: none;
-        }
-      }
-
-      &__ggmap {
-        margin: 55px auto 0;
-        width: 89%;
-        height: 400px;
-        left: 11%;
-        left: inherit;
-
-        iframe {
-          //position: absolute;
-          top: 0;
-          width: 75%;
-          height: 260px;
-          position: relative;
-          display: block;
-          margin: 0 auto;
-        }
-      }
-
-      &__btn {
-        &__sp {
-          margin: 60px auto 40px;
-          width: 80%;
-          //height: 88px;
-          font-family: ヒラギノ明朝 Pro, serif;
-          font-weight: 600;
-          background-color: $white;
-          border: 4px solid $darkgreen;
-          //font-size: 26.67px;
-          border-radius: 50px;
-          text-align: center;
-          color: $darkgreen;
-          text-align: center;
-          padding: 20px;
-          left: 10%;
-        }
-
-        &__pc {
-          display: none;
-        }
-      }
-
-      &__adjustment {
-        margin: 0 auto;
-        //width: 100%;
-      }
-
-      &__adjustment02 {
-        margin: 0 auto;
-        width: 100%;
-      }
     }
   }
 
@@ -883,8 +474,9 @@
   //
   @include media-768 {
     width: 100%;
-    //margin: 0 auto;
     .main-sec {
+
+      /*
       &__wrapper {
         position: relative;
         margin-bottom: 130px;
@@ -903,6 +495,8 @@
         -ms-transform: translateX(-50%);
         z-index: 0;
       }
+
+       */
 
       &__adjustment {
         width: 100%;
@@ -1417,8 +1011,6 @@
   4.footer
 -------------------------------------------------------------- */
 .footer {
-  margin: 0 auto;
-  width: 100%;
 
   //
   // --- media-Mobile---
@@ -1426,30 +1018,23 @@
   @include media-Mobile {
     .footer-sec {
       &__footer {
-        &__sp {
-          padding-top: 4400px;
-          left: 50%;
-          text-aligin: center;
-          width: 100%;
-          height: 65px;
+        width: 100%;
+        height: 65px;
+        background-color: $darkgreen;
+        text-aligin: center;
 
-          p{
-            font-family: ヒラギノ明朝 Pro, serif;
-            font-weight: 600;
-            color: $white;
-            height: 65px;
-            width: 100%;
-            text-align: center;
-            font-size: 18px;
-            background-color: $webshop-darkgreen;
-            padding-top: 20px;
-            left: 1000px;
-          }
+        p {
+          margin: 0 auto;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
+          color: $white;
+          font-size: 18px;
+          width: 290px;
+          padding-top: 20px;
         }
-        &__pc {display: none}
+      }
     }
   }
-}
 
   //
   // --- media-Tablet & Pc---
@@ -1457,24 +1042,18 @@
   @include media-768 {
     .footer-sec {
       &__footer {
-        &__sp {
-          display: none;
-        }
+        width: 100%;
+        height: 56px;
+        background-color: $darkgreen;
+        text-align: center;
 
-        &__pc {
-          width: 100%;
-          height: 56px;
-          background-color: $darkgreen;
-          text-align: center;
-          margin-top: 100px;
-
-          p{
-            font-family: ヒラギノ明朝 Pro, serif;
-            font-weight: 600;
-            color: $white;
-            font-size: 15px;
-            padding-top: 20px;
-          }
+        p {
+          margin: 0 auto;
+          font-family: ヒラギノ明朝 Pro, serif;
+          font-weight: 600;
+          color: $white;
+          font-size: 15px;
+          padding-top: 20px;
         }
       }
     }
