@@ -11,7 +11,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "htmlhint": "^0.11.0",
+    "htmlhint": "^0.14.0",
     "node-sass": "^4.13.1"
   }
 }
