@@ -12,6 +12,6 @@
   "license": "",
   "dependencies": {
     "htmlhint": "^0.14.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^5.0.0"
   }
 }
