@@ -5,13 +5,13 @@
   "main": "index.html",
   "scripts": {
     "test": "htmlhint **/*.html",
-    "build:css": "node-sass scss --source-map css --output css --output-style compressed",
-    "watch:css": "node-sass scss --source-map css --watch scss --output css --output-style compressed"
+    "build:css": "sass --style=compressed --source-map scss/style.scss:css/style.css scss/style-shop.scss:css/style-shop.css scss/style-takeout.scss:css/style-takeout.css",
+    "watch:css": "sass --watch --style=compressed --source-map scss/style.scss:css/style.css scss/style-shop.scss:css/style-shop.css scss/style-takeout.scss:css/style-takeout.css"
   },
   "author": "",
   "license": "",
   "dependencies": {
     "htmlhint": "^1.0.0",
-    "node-sass": "^7.0.0"
+    "sass": "^1.99.0"
   }
 }
